@@ -1,0 +1,25 @@
+# Secrets / local config
+.env
+.env.*
+!.env.example
+*.local
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Node
+node_modules/
+dist/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Trained ML models
+backend/models/
