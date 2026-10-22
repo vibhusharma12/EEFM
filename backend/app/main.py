@@ -58,6 +58,17 @@ async def unhandled_error_handler(_: Request, exc: Exception) -> JSONResponse:
     return JSONResponse(status_code=500, content={"detail": "Internal server error."})
 
 
+@app.get("/", tags=["system"])
+def root() -> dict[str, str]:
+    return {
+        "status": "online",
+        "name": "StockSense AI API",
+        "version": config.APP_VERSION,
+        "docs": "/docs",
+        "health": "/api/health",
+    }
+
+
 @app.get("/api/health", response_model=HealthResponse, tags=["system"])
 def health() -> HealthResponse:
     return HealthResponse(status="ok", version=config.APP_VERSION, time=datetime.now(timezone.utc).isoformat())
