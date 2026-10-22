@@ -1,3 +1,12 @@
+---
+title: StockSense AI API
+emoji: 📈
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+app_port: 7860
+---
+
 # StockSense AI — Stock Price Forecasting Dashboard
 
 A full-stack financial analytics and price forecasting system. Built with a **React 19 + TypeScript + Vite** dashboard, a **FastAPI** backend, and a **scikit-learn** machine learning pipeline.
